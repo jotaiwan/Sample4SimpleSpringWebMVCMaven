@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
 
     <!-- Base Definition -->
-    <definition name="base-definition"
+    <definition name="base"
                 template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
         <put-attribute name="title" value="" />
         <put-attribute name="header" value="/WEB-INF/views/tiles/templates/templateHeader.jsp" />
-        <!--
-        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/defaultMenu.jsp" />
-        -->
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/templateMenu.jsp" />
         <put-attribute name="body" value="" />
         <put-attribute name="footer" value="/WEB-INF/views/tiles/templates/templateFooter.jsp" />
     </definition>
 
     <!-- Home Page -->
-    <definition name="home" extends="base-definition">
-        <put-attribute name="title" value="Welcome" />
+    <definition name="home" extends="base">
+        <!--
+        <put-attribute name="title" value="Welcome to Sample4SimpleSpringWebMaven" />
+        -->
         <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
     </definition>
 
+    <!-- Product Page -->
+    <definition name="produt" extends="base">
+        <put-attribute name="title" value="Product" />
+        <put-attribute name="body" value="/WEB-INF/views/product.jsp" />
+    </definition>
+
     <!-- Employee Page -->
-    <definition name="employee" extends="base-definition">
-        <put-attribute name="title" value="Products" />
+    <definition name="employee" extends="base">
+        <put-attribute name="title" value="Employee" />
         <put-attribute name="body" value="/WEB-INF/views/employees.jsp" />
     </definition>
 
-    <!-- Contact-us Page -->
-    <!--
-    <definition name="contactus" extends="base-definition">
-        <put-attribute name="title" value="Contact Us" />
-        <put-attribute name="body" value="/WEB-INF/views/pages/contactus.jsp" />
+    <!-- Page -->
+    <definition name="page" extends="base">
+        <!--
+        <put-attribute name="title" value="Page" />
+        -->
+        <put-attribute name="body" value="/WEB-INF/views/page.jsp" />
     </definition>
--->
+
 </tiles-definitions>

@@ -12,23 +12,21 @@
     <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
 </head>
 
-<body>
-<header id="header">
-    <tiles:insertAttribute name="header" />
-</header>
+    <body>
+        <header id="header">
+            <tiles:insertAttribute name="header" />
+        </header>
 
-<%--
-<section id="sidemenu">
-    <tiles:insertAttribute name="menu" />
-</section>
---%>
+        <section id="sidemenu">
+            <tiles:insertAttribute name="menu" />
+        </section>
 
-<section id="site-content">
-    <tiles:insertAttribute name="body" />
-</section>
+        <section id="site-content">
+            <tiles:insertAttribute name="body" />
+        </section>
 
-<footer id="footer">
-    <tiles:insertAttribute name="footer" />
-</footer>
-</body>
+        <footer id="footer">
+            <tiles:insertAttribute name="footer" />
+        </footer>
+    </body>
 </html>

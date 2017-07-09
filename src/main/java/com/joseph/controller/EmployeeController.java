@@ -22,8 +22,6 @@ public class EmployeeController {
     @RequestMapping(value="/all", method= RequestMethod.GET)
     public String all(Model model) {
         List<Employee> employees = employeeService.findAllEmployees();
-
-//        employeeService.deleteEmployeeBySsn("ssn00000002");
         model.addAttribute("employees", employees);
         return "employees";
     }
