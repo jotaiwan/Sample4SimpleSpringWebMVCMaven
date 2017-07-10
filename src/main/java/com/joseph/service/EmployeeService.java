@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
+@Transactional(readOnly = true, rollbackFor = Exception.class)
 public class EmployeeService {
 
 	@Autowired

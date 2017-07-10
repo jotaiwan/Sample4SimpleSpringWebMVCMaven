@@ -21,7 +21,7 @@ import java.util.Properties;
  */
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({ "com.joseph.config" })
+//@ComponentScan({ "com.joseph.config" })
 @PropertySource(value = { "classpath:application.properties" })
 public class HibernateConfig {
 
