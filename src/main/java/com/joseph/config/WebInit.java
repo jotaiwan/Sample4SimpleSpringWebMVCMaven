@@ -19,4 +19,10 @@ public class WebInit extends AbstractAnnotationConfigDispatcherServletInitialize
     protected String[] getServletMappings() {
         return new String[] { "/" };
     }
+
+//    @Override
+//    public void onStartup(ServletContext servletContext) throws ServletException {
+//        super.onStartup(servletContext);
+//        servletContext.setInitParameter("spring.profiles.active", environment.getProperty("profile"));
+//    }
 }
