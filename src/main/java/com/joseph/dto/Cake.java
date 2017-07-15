@@ -1,17 +1,19 @@
 package com.joseph.dto;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 /**
  * Created by jotaiwan on 13/07/2017.
  */
 @Component
+@Primary
 public class Cake implements Dessert {
     private String flavor;
     private String size;
 
     public String description() {
-        return "Icecream flavor is " + flavor + " with " + size;
+        return "This is cake";
     }
 
     public String getFlavor() {

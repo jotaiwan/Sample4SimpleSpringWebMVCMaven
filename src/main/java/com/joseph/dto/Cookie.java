@@ -11,7 +11,7 @@ public class Cookie implements Dessert {
     private String size;
 
     public String description() {
-        return "Icecream flavor is " + flavor + " with " + size;
+        return "This is Cookie";
     }
 
     public String getFlavor() {
