@@ -1,7 +1,7 @@
 package com.joseph.dto;
 
 import com.joseph.annotation.Cold;
-import com.joseph.annotation.Creamy;
+import com.joseph.annotation.Fruity;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Cold
-@Creamy
-public class IceCream implements Dessert {
+@Fruity
+public class Popsicle implements Dessert {
     private String flavor;
     private String size;
 
     public String description() {
-        return "This is Icecream";
+        return "This is Popsicle";
     }
 
     public String getFlavor() {
