@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class PageController {
 
     @RequestMapping(value="/{pageId}", method= RequestMethod.GET)
-    public String spittle(
+    public String page(
             @PathVariable("pageId") long pageId,
             Model model) {
         model.addAttribute("pageId", pageId);

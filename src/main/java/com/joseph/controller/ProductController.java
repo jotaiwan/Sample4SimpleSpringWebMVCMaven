@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/product")
 public class ProductController {
     @RequestMapping(value="/all")
-    public String home() {
+    public String product() {
         return "product";
     }
 }
