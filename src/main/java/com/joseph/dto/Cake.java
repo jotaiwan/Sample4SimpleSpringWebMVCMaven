@@ -1,5 +1,6 @@
 package com.joseph.dto;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Component;
  * Created by jotaiwan on 13/07/2017.
  */
 @Component
-@Primary
+@Qualifier("Soft")
 public class Cake implements Dessert {
     private String flavor;
     private String size;

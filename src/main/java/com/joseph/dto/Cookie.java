@@ -1,11 +1,13 @@
 package com.joseph.dto;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
  * Created by jotaiwan on 13/07/2017.
  */
 @Component
+@Qualifier("Crispy")
 public class Cookie implements Dessert {
     private String flavor;
     private String size;

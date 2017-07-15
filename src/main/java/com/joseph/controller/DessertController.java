@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class DessertController {
 
     @Autowired
-    @Qualifier("cake")
+    @Qualifier("Crispy")
     private Dessert dessert;
 
     @RequestMapping(value="/default")
