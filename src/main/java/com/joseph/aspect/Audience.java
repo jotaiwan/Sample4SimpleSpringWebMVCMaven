@@ -1,7 +1,7 @@
-package com.joseph.concert;
-
+package com.joseph.aspect;
 
 import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.ProceedingJoinPoint;
 
 import static com.sun.xml.internal.ws.dump.LoggingDumpTube.Position.Before;
 
@@ -11,8 +11,20 @@ import static com.sun.xml.internal.ws.dump.LoggingDumpTube.Position.Before;
 @Aspect
 public class Audience {
 
-    @Pointcut("execution(** com.joseph.concert.Performance.perform(..))")
+    @Pointcut("execution(** com.joseph.aspect.Performance.perform(..))")
     public void performance() {}
+
+    @Around("performance()")
+    public void watchPerformance(ProceedingJoinPoint jp) {
+        try {
+            System.out.println("Silencing cell phones");
+            System.out.println("Taking seats");
+            jp.proceed();
+            System.out.println("CLAP CLAP CLAP!!!");
+        } catch (Throwable e) {
+            System.out.println("Demanding a refund");
+        }
+    }
 
     @Before("performance()")
     public void silenceCellPhones() {

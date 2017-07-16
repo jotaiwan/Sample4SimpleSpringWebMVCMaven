@@ -55,4 +55,10 @@
         <put-attribute name="body" value="/WEB-INF/views/shoppingCart.jsp" />
     </definition>
 
+    <!-- Sound Page -->
+    <definition name="player" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/player.jsp" />
+    </definition>
+
+
 </tiles-definitions>

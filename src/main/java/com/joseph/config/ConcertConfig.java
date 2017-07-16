@@ -1,6 +1,6 @@
 package com.joseph.config;
 
-import com.joseph.concert.Audience;
+import com.joseph.aspect.Audience;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;

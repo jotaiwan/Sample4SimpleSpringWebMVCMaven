@@ -3,16 +3,26 @@ package com.joseph.dto;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * Created by jotaiwan on 15/07/2017.
  */
 @Component
-public class BlankDisc {
+public class BlankDisc implements CompactDisc {
     private String title;
     private String artist;
+    private List<String> tracks;
 
     public BlankDisc() {
 
+    }
+
+    public void play() {
+        System.out.println("Play " + getTitle() + " by " + getArtist());
+        for (String track : getTracks()) {
+            System.out.println("-Track: " + track);
+        }
     }
 
 //    public BlankDisc(String title, String artist) {
@@ -41,5 +51,13 @@ public class BlankDisc {
 
     public void setArtist(String artist) {
         this.artist = artist;
+    }
+
+    public List<String> getTracks() {
+        return tracks;
+    }
+
+    public void setTracks(List<String> tracks) {
+        this.tracks = tracks;
     }
 }
