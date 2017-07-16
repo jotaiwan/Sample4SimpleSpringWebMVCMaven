@@ -7,5 +7,6 @@
         <li><a href="${pageContext.request.contextPath}/employee/all">Employee</a></li>
         <li><a href="${pageContext.request.contextPath}/page/1">Page 1</a></li>
         <li><a href="${pageContext.request.contextPath}/dessert/default">Dessert</a></li>
+        <li><a href="${pageContext.request.contextPath}/shoppingcart/cart1">Shopping Cart</a></li>
     </ul>
 </nav>

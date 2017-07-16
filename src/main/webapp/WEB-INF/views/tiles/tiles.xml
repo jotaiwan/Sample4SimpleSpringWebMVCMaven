@@ -50,5 +50,9 @@
         <put-attribute name="body" value="/WEB-INF/views/dessert.jsp" />
     </definition>
 
+    <!-- ShoppingCart Page -->
+    <definition name="shoppingCart" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/shoppingCart.jsp" />
+    </definition>
 
 </tiles-definitions>
