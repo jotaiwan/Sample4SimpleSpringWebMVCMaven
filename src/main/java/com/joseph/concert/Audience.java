@@ -6,7 +6,7 @@ import org.aspectj.lang.annotation.*;
 /**
  * Created by jotaiwan on 16/07/2017.
  */
-//@Aspect
+@Aspect
 public class Audience {
 
     @Pointcut("execution(** concert.Performance.perform(..))")
