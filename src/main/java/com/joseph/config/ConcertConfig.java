@@ -9,6 +9,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * Created by jotaiwan on 16/07/2017.
  */
 @Configuration
+@EnableAspectJAutoProxy
 public class ConcertConfig {
 
     @Bean

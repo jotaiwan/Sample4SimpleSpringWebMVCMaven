@@ -17,7 +17,6 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
  */
 @Configuration
 @EnableWebMvc
-@EnableAspectJAutoProxy
 @ComponentScan({"com.joseph"})
 public class WebConfig extends WebMvcConfigurerAdapter {
 
