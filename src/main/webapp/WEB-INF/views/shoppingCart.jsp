@@ -8,5 +8,6 @@
 
 <body>
 
+<h3>Shopping cart</h3>
 Shopping cart name: <c:out value="${shoppingCart.name}" />
 </body>

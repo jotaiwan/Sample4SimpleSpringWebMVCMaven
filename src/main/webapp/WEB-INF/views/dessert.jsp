@@ -7,7 +7,7 @@
     <title>Dessert</title>
 </head>
 <body>
-
+<h3>Dessert page</h3>
 Default dessert is <c:out value="${defaultDessert}" />
 </body>
 </html>

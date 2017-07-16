@@ -13,6 +13,7 @@
     <title>All Employees</title>
 </head>
 <body>
+<h3>Employee page</h3>
 <div>Display all employees</div>
 <div>
     <c:forEach items="${employees}" var="employee">

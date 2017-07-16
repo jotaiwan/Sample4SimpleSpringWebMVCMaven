@@ -6,5 +6,5 @@
     <title>Product Page</title>
 </head>
 <body>
-    <h2>Products page</h2>
+    <h3>Products page</h3>
 </body>
