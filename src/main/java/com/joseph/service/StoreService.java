@@ -10,7 +10,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class StoreService {
 
-    public ShoppingCart createShoppingCart(String name) {
+//    @Autowired
+//    private ShoppingCart shoppingCart;
+
+    public ShoppingCart setCartName(String name) {
         return new ShoppingCart(name);
+//        shoppingCart.setName(name);
+//        return shoppingCart;
     }
+
+//    public ShoppingCart getCart() {
+//        return shoppingCart;
+//    }
 }
