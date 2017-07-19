@@ -1,9 +1,7 @@
 package com.joseph.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.*;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
@@ -17,7 +15,10 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan({"com.joseph"})
+@ComponentScan(basePackages={"com.joseph.controller"},
+        includeFilters={
+                @ComponentScan.Filter(type= FilterType.ANNOTATION, value=Controller.class)
+        })
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Bean
