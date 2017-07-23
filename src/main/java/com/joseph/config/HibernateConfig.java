@@ -21,24 +21,13 @@ import java.util.Properties;
  */
 @Configuration
 @EnableTransactionManagement
-@PropertySource(value = { "classpath:application.properties" })
+@PropertySource(ignoreResourceNotFound=true, value="classpath:application-${spring.profiles.active}.properties")
 public class HibernateConfig {
 
     @Autowired
     private Environment environment;
 
     @Bean
-    @Profile("demo")
-    public LocalSessionFactoryBean demoSessionFactory() {
-        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
-        sessionFactory.setDataSource(demoDataSource());
-        sessionFactory.setPackagesToScan(new String[] { "com.joseph.model" });
-        sessionFactory.setHibernateProperties(hibernateProperties());
-        return sessionFactory;
-    }
-
-    @Bean
-    @Profile("prod")
     public LocalSessionFactoryBean prodSessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(prodDataSource());
@@ -47,24 +36,11 @@ public class HibernateConfig {
         return sessionFactory;
     }
 
-
     @Bean
-    @Profile("demo")
-    public DataSource demoDataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(environment.getRequiredProperty("jdbc.driverClassName"));
-        dataSource.setUrl(environment.getRequiredProperty("jdbc.demo.url"));
-        dataSource.setUsername(environment.getRequiredProperty("jdbc.username"));
-        dataSource.setPassword(environment.getRequiredProperty("jdbc.password"));
-        return dataSource;
-    }
-
-    @Bean
-    @Profile("prod")
     public DataSource prodDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(environment.getRequiredProperty("jdbc.driverClassName"));
-        dataSource.setUrl(environment.getRequiredProperty("jdbc.prod.url"));
+        dataSource.setUrl(environment.getRequiredProperty("jdbc.url"));
         dataSource.setUsername(environment.getRequiredProperty("jdbc.username"));
         dataSource.setPassword(environment.getRequiredProperty("jdbc.password"));
         return dataSource;

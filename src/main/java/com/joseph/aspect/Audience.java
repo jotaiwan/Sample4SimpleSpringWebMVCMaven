@@ -1,9 +1,7 @@
 package com.joseph.aspect;
 
-import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.ProceedingJoinPoint;
-
-import static com.sun.xml.internal.ws.dump.LoggingDumpTube.Position.Before;
+import org.aspectj.lang.annotation.*;
 
 /**
  * Created by jotaiwan on 16/07/2017.

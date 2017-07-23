@@ -20,7 +20,7 @@ public class ShoppingCartController {
 
     @RequestMapping(value="/{name}", method= RequestMethod.GET)
     public String createShoppingCart(@PathVariable("name") String name, Model model) {
-//        model.addAttribute("shoppingCart", storeService.setCartName(name));
+        model.addAttribute("shoppingCart", storeService.setCartName(name));
         return "shoppingCart";
     }
 }
